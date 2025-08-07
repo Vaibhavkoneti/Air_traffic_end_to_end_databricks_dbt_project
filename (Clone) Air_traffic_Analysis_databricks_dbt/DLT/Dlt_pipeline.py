@@ -9,6 +9,7 @@ from pyspark.sql.types import *
 )
 def stage_bookings():
     df = spark.readStream.format("delta")\
+        
         .load("/Volumes/workspace/bronze/bronzevolume/bookings/data")
     return df
 
